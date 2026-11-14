@@ -1,0 +1,1156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ehsanul Kabir Sagar | Academic Portfolio</title>
+
+    <meta name="description" content="Academic portfolio of Ehsanul Kabir Sagar, Senior Research Assistant at icddr,b, Bangladesh. Research interests include infection biology, molecular biology, immunology and nutritional biochemistry.">
+
+    <meta name="author" content="Ehsanul Kabir Sagar">
+
+    <meta name="theme-color" content="#102747">
+
+    <style>
+        :root {
+            --navy: #102747;
+            --navy-light: #193b64;
+            --blue: #2f6598;
+            --white: #ffffff;
+            --background: #f5f7fa;
+            --text: #344054;
+            --muted: #667085;
+            --border: #e4e9f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: var(--white);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        /* NAVIGATION */
+
+        header {
+            background: var(--navy);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+        }
+
+        nav {
+            min-height: 72px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 19px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 27px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #e7edf5;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #9bc5ef;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 27px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: white;
+        }
+
+        /* HERO SECTION */
+
+        .hero {
+            background: linear-gradient(
+                120deg,
+                #102747,
+                #193d67
+            );
+            color: white;
+            padding: 95px 0;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.5fr 0.8fr;
+            align-items: center;
+            gap: 65px;
+        }
+
+        .hero-tag {
+            color: #a9ccef;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .hero h1 {
+            font-size: clamp(34px, 5vw, 52px);
+            line-height: 1.2;
+            margin-bottom: 18px;
+        }
+
+        .hero h2 {
+            font-size: 21px;
+            font-weight: 400;
+            color: #c9d9eb;
+            margin-bottom: 22px;
+        }
+
+        .hero p {
+            font-size: 16px;
+            color: #e1e9f2;
+            max-width: 650px;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .btn {
+            padding: 12px 23px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--navy);
+        }
+
+        .btn-primary:hover {
+            background: #dceafa;
+        }
+
+        .btn-outline {
+            border: 1px solid #cbd9e8;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: var(--navy);
+        }
+
+        /* PROFILE PHOTO */
+
+        .profile-photo {
+            width: 270px;
+            height: 320px;
+            margin: auto;
+            border: 5px solid rgba(255,255,255,0.2);
+            border-radius: 12px;
+            background: #dce5ef;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--navy);
+            font-size: 15px;
+            font-weight: 600;
+            overflow: hidden;
+        }
+
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* GENERAL SECTIONS */
+
+        section {
+            padding: 75px 0;
+            scroll-margin-top: 75px;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-heading h2 {
+            color: var(--navy);
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        .section-heading::after {
+            content: "";
+            display: block;
+            width: 55px;
+            height: 3px;
+            background: var(--blue);
+            margin: 16px auto 0;
+        }
+
+        /* ABOUT */
+
+        .about {
+            background: var(--background);
+        }
+
+        .about-content {
+            max-width: 900px;
+            margin: auto;
+            font-size: 16px;
+            text-align: justify;
+        }
+
+        .about-content p {
+            margin-bottom: 17px;
+        }
+
+        /* RESEARCH INTERESTS */
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .research-card {
+            padding: 27px;
+            background: var(--background);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .research-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(16,39,71,0.08);
+        }
+
+        .research-card h3 {
+            color: var(--navy);
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+
+        .research-card p {
+            font-size: 14px;
+            color: var(--muted);
+        }
+
+        .research-icon {
+            font-size: 27px;
+            margin-bottom: 12px;
+        }
+
+        /* EXPERIENCE */
+
+        .experience {
+            background: var(--background);
+        }
+
+        .timeline {
+            max-width: 850px;
+            margin: auto;
+            border-left: 3px solid #b7cce2;
+            padding-left: 30px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 35px;
+            background: white;
+            padding: 25px;
+            border-radius: 7px;
+            border: 1px solid var(--border);
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -40px;
+            top: 28px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: var(--blue);
+            border: 3px solid white;
+        }
+
+        .timeline-item h3 {
+            color: var(--navy);
+            font-size: 19px;
+            margin-bottom: 5px;
+        }
+
+        .timeline-item .institution {
+            color: var(--blue);
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+
+        .timeline-item p {
+            font-size: 14px;
+            color: var(--muted);
+        }
+
+        /* EDUCATION */
+
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .education-card {
+            border: 1px solid var(--border);
+            padding: 30px;
+            border-radius: 8px;
+            background: white;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.03);
+        }
+
+        .education-card h3 {
+            color: var(--navy);
+            margin-bottom: 10px;
+        }
+
+        .education-card .degree {
+            color: var(--blue);
+            font-weight: 600;
+        }
+
+        .education-card p {
+            font-size: 14px;
+            color: var(--muted);
+            margin-top: 8px;
+        }
+
+        /* SKILLS */
+
+        .skills {
+            background: var(--background);
+        }
+
+        .skills-container {
+            max-width: 950px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 13px;
+        }
+
+        .skill {
+            background: white;
+            border: 1px solid #dbe4ee;
+            padding: 11px 19px;
+            border-radius: 5px;
+            color: var(--navy);
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* PUBLICATIONS */
+
+        .publication-card {
+            max-width: 900px;
+            margin: auto;
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--blue);
+            padding: 28px;
+            border-radius: 7px;
+            background: white;
+        }
+
+        .publication-card h3 {
+            color: var(--navy);
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+
+        .publication-card p {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .publication-card a {
+            color: var(--blue);
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .publication-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            background: var(--navy);
+            color: white;
+            text-align: center;
+        }
+
+        .contact .section-heading h2 {
+            color: white;
+        }
+
+        .contact .section-heading p {
+            color: #cbd8e7;
+        }
+
+        .contact-content {
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .contact-content p {
+            color: #d6e1ed;
+            margin-bottom: 25px;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .contact-links a {
+            border: 1px solid #b7cce2;
+            padding: 11px 22px;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .contact-links a:hover {
+            background: white;
+            color: var(--navy);
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #0b1c32;
+            color: #bdcad9;
+            text-align: center;
+            padding: 20px;
+            font-size: 13px;
+        }
+
+        /* RESPONSIVE DESIGN */
+
+        @media (max-width: 850px) {
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .research-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .profile-photo {
+                width: 230px;
+                height: 270px;
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            nav {
+                position: relative;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 72px;
+                left: 0;
+                width: 100%;
+                background: var(--navy);
+                padding: 10px 20px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                padding: 10px 0;
+            }
+
+            .hero {
+                padding: 65px 0;
+            }
+
+            .hero h2 {
+                font-size: 18px;
+            }
+
+            .research-grid,
+            .education-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 55px 0;
+            }
+
+            .section-heading h2 {
+                font-size: 26px;
+            }
+
+            .about-content {
+                text-align: left;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header>
+    <div class="container">
+        <nav>
+
+            <a href="#home" class="logo">
+                EKS | Academic Portfolio
+            </a>
+
+            <button class="menu-toggle"
+                    aria-label="Toggle navigation"
+                    aria-expanded="false"
+                    onclick="toggleMenu()">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </nav>
+    </div>
+</header>
+
+
+<!-- HERO SECTION -->
+
+<section class="hero" id="home">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div>
+
+                <div class="hero-tag">
+                    Academic & Research Portfolio
+                </div>
+
+                <h1>
+                    Ehsanul Kabir Sagar
+                </h1>
+
+                <h2>
+                    Senior Research Assistant |
+                    Infection Biology & Molecular Research
+                </h2>
+
+                <p>
+                    A research professional from Bangladesh with
+                    academic and practical experience in infection
+                    biology, molecular biology, immunological
+                    investigations, and nutritional biochemistry.
+                    Currently working at the International Centre
+                    for Diarrhoeal Disease Research, Bangladesh
+                    (icddr,b).
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#about" class="btn btn-primary">
+                        Explore My Profile
+                    </a>
+
+                    <a href="https://scholar.google.com/citations?user=BYHAhLoAAAAJ&hl=en"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="btn btn-outline">
+                        Google Scholar
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="profile-photo">
+
+                <!-- Replace this placeholder with your photograph -->
+                <!-- Upload your photo to GitHub as profile.jpg -->
+
+                <img src="profile.jpg"
+                     alt="Portrait of Ehsanul Kabir Sagar"
+                     onerror="this.style.display='none'; this.parentElement.innerHTML='YOUR PROFILE PHOTO';">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT SECTION -->
+
+<section class="about" id="about">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <h2>About Me</h2>
+            <p>Academic background and research journey</p>
+        </div>
+
+        <div class="about-content">
+
+            <p>
+                I am Ehsanul Kabir Sagar, a biochemistry and
+                biotechnology graduate from Bangladesh,
+                currently working as a Senior Research Assistant
+                at the International Centre for Diarrhoeal Disease
+                Research, Bangladesh (icddr,b).
+            </p>
+
+            <p>
+                I hold a Bachelor's degree in Biochemistry from
+                Primeasia University, Dhaka, with a CGPA of
+                3.78/4.00, and a Master's degree in Biotechnology
+                from North South University, Dhaka.
+            </p>
+
+            <p>
+                My research experience encompasses infection
+                biology, molecular biology, immunological
+                investigations, microbiological techniques, and
+                nutritional biochemistry. My master's research
+                focused on the infection and survival of mealworm
+                and superworm larvae following exposure to
+                different strains of Salmonella Typhi.
+            </p>
+
+            <p>
+                Through my professional experience at icddr,b,
+                I have developed practical expertise in
+                laboratory-based investigations, biological
+                measurements, immunological assays, and
+                scientific manuscript preparation.
+            </p>
+
+            <p>
+                My long-term academic goal is to pursue doctoral
+                research and contribute to scientific
+                investigations addressing infectious diseases,
+                host-pathogen interactions, and the molecular
+                mechanisms underlying human health and disease.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- RESEARCH INTERESTS -->
+
+<section id="research">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <h2>Research Interests</h2>
+            <p>
+                Scientific areas that motivate my research
+                interests
+            </p>
+        </div>
+
+        <div class="research-grid">
+
+            <div class="research-card">
+                <div class="research-icon">🧫</div>
+                <h3>Infection Biology</h3>
+                <p>
+                    Host-pathogen interactions, bacterial
+                    pathogenesis, pathogen-associated variation,
+                    and infectious disease mechanisms.
+                </p>
+            </div>
+
+            <div class="research-card">
+                <div class="research-icon">🧬</div>
+                <h3>Molecular Biology</h3>
+                <p>
+                    Molecular mechanisms of disease, microbial
+                    genetics, genomic analysis, and molecular
+                    characterization of biological systems.
+                </p>
+            </div>
+
+            <div class="research-card">
+                <div class="research-icon">🛡️</div>
+                <h3>Immunology</h3>
+                <p>
+                    Host immune responses, immunological
+                    mechanisms of infection, cellular immunity,
+                    and immune regulation.
+                </p>
+            </div>
+
+            <div class="research-card">
+                <div class="research-icon">🔬</div>
+                <h3>Microbiology</h3>
+                <p>
+                    Bacterial infection, microbial interactions,
+                    antimicrobial resistance, and pathogen
+                    characterization.
+                </p>
+            </div>
+
+            <div class="research-card">
+                <div class="research-icon">🥗</div>
+                <h3>Nutritional Biochemistry</h3>
+                <p>
+                    Nutritional status, infection-nutrition
+                    interactions, metabolic mechanisms, and
+                    nutrition-related health outcomes.
+                </p>
+            </div>
+
+            <div class="research-card">
+                <div class="research-icon">📊</div>
+                <h3>Genomics & Biomarkers</h3>
+                <p>
+                    Whole-genome sequencing, molecular
+                    biomarkers, biological data analysis,
+                    and disease-associated molecular signatures.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- RESEARCH EXPERIENCE -->
+
+<section class="experience" id="experience">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <h2>Research Experience</h2>
+            <p>Professional and academic research activities</p>
+        </div>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+
+                <h3>Senior Research Assistant</h3>
+
+                <div class="institution">
+                    International Centre for Diarrhoeal Disease
+                    Research, Bangladesh (icddr,b)
+                </div>
+
+                <p>
+                    Engaged in research activities involving
+                    immunological and microbiological
+                    investigations, biological measurements,
+                    laboratory-based assays, and scientific
+                    data-related work.
+                </p>
+
+            </div>
+
+            <div class="timeline-item">
+
+                <h3>Master's Research Thesis</h3>
+
+                <div class="institution">
+                    North South University, Dhaka, Bangladesh
+                </div>
+
+                <p>
+                    Investigated the infection and survival of
+                    mealworm and superworm larvae following
+                    infection with different strains of
+                    Salmonella Typhi. Research activities
+                    included bacterial culture, microbiological
+                    assays, and whole-genome sequencing data
+                    analysis using Galaxy tools.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- EDUCATION -->
+
+<section id="education">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <h2>Education</h2>
+            <p>Academic qualifications</p>
+        </div>
+
+        <div class="education-grid">
+
+            <div class="education-card">
+
+                <h3>Master of Science</h3>
+
+                <div class="degree">
+                    Biotechnology
+                </div>
+
+                <p>
+                    North South University<br>
+                    Dhaka, Bangladesh
+                </p>
+
+            </div>
+
+            <div class="education-card">
+
+                <h3>Bachelor of Science</h3>
+
+                <div class="degree">
+                    Biochemistry
+                </div>
+
+                <p>
+                    Primeasia University<br>
+                    Dhaka, Bangladesh<br>
+                    CGPA: 3.78/4.00
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- TECHNICAL SKILLS -->
+
+<section class="skills" id="skills">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <h2>Technical Skills</h2>
+            <p>Laboratory and research competencies</p>
+        </div>
+
+        <div class="skills-container">
+
+            <span class="skill">ELISA</span>
+
+            <span class="skill">Immunological Assays</span>
+
+            <span class="skill">Microbiological Techniques</span>
+
+            <span class="skill">Bacterial Culture</span>
+
+            <span class="skill">MEEDAT</span>
+
+            <span class="skill">FTIR Spectrometry</span>
+
+            <span class="skill">Body Composition Analysis</span>
+
+            <span class="skill">Whole Genome Sequencing</span>
+
+            <span class="skill">Galaxy Tools</span>
+
+            <span class="skill">Molecular Biology</span>
+
+            <span class="skill">Scientific Writing</span>
+
+            <span class="skill">Manuscript Preparation</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PUBLICATIONS -->
+
+<section id="publications">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <h2>Publications</h2>
+            <p>Peer-reviewed scientific contributions</p>
+        </div>
+
+        <div class="publication-card">
+
+            <h3>
+                Association of Escherichia coli Pathotypes
+                with Fecal Markers of Enteropathy and
+                Nutritional Status Among Underweight
+                Adults in Bangladesh
+            </h3>
+
+            <p>
+                Published in
+                <strong>
+                    Frontiers in Cellular and Infection Microbiology
+                </strong>.
+            </p>
+
+            <p>
+                A research contribution investigating the
+                association between Escherichia coli pathotypes,
+                fecal markers of enteropathy, and nutritional
+                status among underweight adults in Bangladesh.
+            </p>
+
+            <a href="https://doi.org/10.3389/fcimb.2025.1553688"
+               target="_blank"
+               rel="noopener noreferrer">
+                View Publication / DOI →
+            </a>
+
+        </div>
+
+        <div style="text-align:center; margin-top:25px;">
+
+            <a href="https://scholar.google.com/citations?user=BYHAhLoAAAAJ&hl=en"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn"
+               style="background:#102747;color:white;">
+                View Google Scholar Profile
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>Get in Touch</h2>
+
+            <p>
+                Academic collaboration, research discussions,
+                and PhD opportunities
+            </p>
+
+        </div>
+
+        <div class="contact-content">
+
+            <p>
+                I welcome opportunities to connect with
+                researchers, academics, and prospective
+                PhD supervisors working in infection biology,
+                molecular biology, microbiology, immunology,
+                and related biomedical research fields.
+            </p>
+
+            <div class="contact-links">
+
+                <a href="https://scholar.google.com/citations?user=BYHAhLoAAAAJ&hl=en"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Google Scholar
+                </a>
+
+                <a href="https://doi.org/10.3389/fcimb.2025.1553688"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Research Publication
+                </a>
+
+                <!-- Replace with your actual email address -->
+                <a href="mailto:YOUR_EMAIL_ADDRESS">
+                    Email Me
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © <span id="year"></span>
+        Ehsanul Kabir Sagar.
+        All Rights Reserved.
+    </p>
+
+    <p>
+        Academic & Research Portfolio | Bangladesh
+    </p>
+
+</footer>
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+    function toggleMenu() {
+
+        const nav = document.getElementById("navLinks");
+        const button = document.querySelector(".menu-toggle");
+
+        nav.classList.toggle("active");
+
+        button.setAttribute(
+            "aria-expanded",
+            nav.classList.contains("active")
+        );
+
+    }
+
+    // Automatically close mobile menu after clicking a link
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            document.getElementById("navLinks")
+                .classList.remove("active");
+
+            document.querySelector(".menu-toggle")
+                .setAttribute("aria-expanded", "false");
+
+        });
+
+    });
+
+    // Dynamic copyright year
+
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
